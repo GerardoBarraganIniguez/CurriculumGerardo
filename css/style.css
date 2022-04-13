@@ -1,0 +1,227 @@
+/*GENERALES*/
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+:root{
+    --bg-aside-nav: black;
+    --standar-font-color: white;
+    --bg-main: #0C0C0C;
+    --bg-aside-photo: #0C0C0C;
+    --btn-leerMas: red;
+    --social-color: rgba(255,255,255,.5);
+    --instagram-color: #e60083;
+    --facebook-color: #1877f2;
+    --whatsapp-color: #25d366;
+}
+*{ box-sizing: border-box;}
+
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    margin: 0;
+    color: var(--standar-font-color);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    margin: 0;
+}
+/* ASIDE NAV*/
+.aside-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 15%;
+    min-width: 15%;
+    height: 100%;
+    background-color: var(--bg-aside-nav);
+    border-right: 2px solid rgb(87, 3, 3);
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    max-width: 700px;
+    max-height: 64px;
+}
+.nav-pages{
+    font-size: 20px;
+}
+.nav-pages li{
+    margin-bottom: 1.5rem;
+    color: red;
+}
+.nav-pages i{
+    margin-right: 1rem;
+}
+.nav-pages a:hover{
+    color: red;
+}
+.social{
+    display: flex;
+}
+.social li{
+    margin: 0 1rem;
+}
+.social i{
+    font-size: 20px;
+    color: var(--social-color)
+}
+.social i:hover{
+    transform: translateY(-8px);
+    transition: .5s;
+}
+#facebook:hover{
+    color: var(--facebook-color);
+    
+}
+#instagram:hover{
+    color: var(--instagram-color);
+}
+#whatsapp:hover{
+    color: var(--whatsapp-color);
+}
+ 
+/* MAIN */
+#main{
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    max-width: 60%;
+}
+#main p{
+    margin-bottom: 7rem;
+}
+.title h1{
+    font-weight: 600;
+}
+.title h2{
+    font-family: monospace;
+    font-weight: 500;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 23ch;
+
+    animation: typing 2s steps(21), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+@keyframes typing{
+    from {width: 0 }
+}
+@keyframes blink{
+    50% {border-color: transparent}
+}
+/*BOTON NEON*/
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    letter-spacing: 4px;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    max-width: 200px;
+}
+.btn-neon:hover{
+    background: var(--btn-leerMas);
+    box-shadow: 0 0 10px var(--btn-leerMas), 0 0 40px var(--btn-leerMas), 0 0 80px var(--btn-leerMas);
+    transition-delay: 1s;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,var(--btn-leerMas));
+}
+.btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+#span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,var(--btn-leerMas));
+}
+.btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,var(--btn-leerMas));
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,var(--btn-leerMas));
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/*FIN BOTON NEON*/
+h1 span{
+    color: red;
+}
+
+
+
+/*ASIDE PHOTO*/
+.aside-photo{
+    width: 25%;
+    background-color: var(--bg-aside-photo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aside-photo img{
+    max-width: 200px;
+    max-height: 400px;
+    border-radius: 1rem;
+    border: 5px solid rgb(161, 159, 159);
+    padding: .5rem;
+}
+/* .configuration{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding: 3rem;
+} */
+
+@media screen and (max-width: 480px) { /*Si la pantalla mide 770px o menos*/
+    .aside-nav{
+        width: 100%;
+        
+    }
+}
